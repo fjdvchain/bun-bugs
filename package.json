@@ -1,0 +1,25 @@
+{
+  "name": "bun-bun",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/bun": "1.1.13",
+    "better-sqlite3": "11.5.0",
+    "drizzle-kit": "0.27.1"
+  },
+  "scripts": {
+    "dev": "bun --watch src/index.ts",
+    "build": "bun build src/index.ts",
+    "start": "NODE_ENV=production bun src/index.ts",
+    "drizzle:push": "drizzle-kit push",
+    "drizzle:generate": "drizzle-kit generate",
+    "drizzle:migrate": "drizzle-kit migrate",
+    "drizzle:studio": "drizzle-kit studio",
+    "test": "bun test"
+  },
+  "peerDependencies": {
+    "typescript": "5.6.3"
+  },
+  "dependencies": {
+    "drizzle-orm": "0.36.0"
+  }
+}
